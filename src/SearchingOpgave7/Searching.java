@@ -4,26 +4,15 @@ public class Searching {
 
     public int searchForString(String[] stringArray, String string) {
 
+        for (int i = 0; i < stringArray.length; i++) {
+            if (stringArray[i].equalsIgnoreCase(string)) {
+            int index = i;
+            return index;
+         }
+        }
 
-            try {
-                for (int i = 0; i < stringArray.length; i++) {
-                    if (stringArray[i].equalsIgnoreCase(string)) {
-                        int index = i;
-                        return index;
-                    }
-                }
-            } catch (Exception e){
-                System.out.println("Exception thrown");
-
-                }
         return -1;
-
-            }
-
-
-
-
-
+    }
 
     public static void main(String[] args) {
         Searching searching = new Searching();
